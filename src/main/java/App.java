@@ -9,12 +9,11 @@ public class App {
     
     @RequestMapping("/")
     @ResponseBody
-    public static String getGreeting() {
+    public String getGreeting() {
         return "Hello world.";
     }
     
     public static void main(String[] args) throws Exception {
         SpringApplication.run(App.class, args);
-        getGreeting();
     }
 }
