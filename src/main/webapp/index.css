@@ -10,11 +10,10 @@
 }
 
 body {
-  background: url("https://www.aecom.com/sg/wp-content/uploads/2016/10/Singapore.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
+  transition: linear all 1s;
 }
 
 .wrap {
