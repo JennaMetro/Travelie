@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var submit = function(){
     //let  url = "http://10.114.32.77:8080/WebApplication1/ws/users?username="+data.username+"&password=" +data.password; ???
-    let  url = "https://travelie.herokuapp.com/ws/users?username="+data.username+"&password=" +data.password;  
+    let  url = "localhost/ws/users?username="+data.username+"&password=" +data.password;  
       //???
     fetch(url, {
       method: "POST",
@@ -75,9 +75,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     )
   }
+  
+  var submitTest = function(){
+      try{
+    let  url = "localhost/Travelie/ws/users?username="+data.username+"&password=" +data.password;  
+    
+    fetch(url, {
+      method: "POST",
+      cache: 'no-cache'
+    })
+    .then(response => response.text())
+    .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+    .then(data => xmlToJson(data))
+    // .then (response => console.log(response))
+    .then(
+      function(result){
+        console.log(result)
+        if (Object.keys(result.userss).length ===0){
+          alert('fail');
+        }{
+          localStorage.setItem("user", JSON.stringify(result.userss.users))
+        
+          //console.log();
+            
+        }
+      }
+    )
+      }catch(e){
+          console.log(e);
+      }
+  }
 
   document.getElementById('submit').addEventListener('click',function(){
-    submit();
+    submitTest();
   });
 
 
