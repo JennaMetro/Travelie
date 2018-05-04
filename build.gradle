@@ -25,7 +25,6 @@ dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     compileOnly 'org.eclipse.jetty:jetty-runner:9.4.9.v20180320'
     testCompile 'junit:junit:4.12'
-    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
     compile("org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE")
 
 }
