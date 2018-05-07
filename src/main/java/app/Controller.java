@@ -1,9 +1,12 @@
 package app;
 
 import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.json.simple.*;
 
 @RestController
 public class Controller {
@@ -35,4 +38,21 @@ public class Controller {
         //return method with top 6 counts 
     }
     
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @SuppressWarnings("unchecked")
+    public JSONObject test() {
+        JSONObject obj = new JSONObject();
+                obj.put("Helsinki", "6");
+                obj.put("Singapore", "5");
+                obj.put("Hong Kong", "4");
+                obj.put("New York", "3");
+                obj.put("Rome", "2");
+                obj.put("Dublin", "1");
+        return obj;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String cityNameSearched(@RequestBody String cityName) {
+        return cityName;
+    }
 }
