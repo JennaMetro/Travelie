@@ -25,7 +25,7 @@ $(document).ready(function() {
                 method: "GET",
               })
               .then(response => response.blob())
-              .then(function(reponse) {
+              .then(function(response) {
                 let urlCreator = window.URL || window.webkitURL;
                 let imageUrl = urlCreator.createObjectURL(response);
                 $(`#recommendSection >  .resultList`).append(
