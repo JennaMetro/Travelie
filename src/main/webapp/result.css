@@ -12,10 +12,9 @@ section>*, section>.resultList>* {
   margin-bottom: 20px;
 }
 
-section> .resultTitle {
-  margin-bottom:30px
+section>.resultTitle {
+  margin-bottom: 30px
 }
-
 
 .result {
   display: grid;
@@ -51,7 +50,7 @@ section> .resultTitle {
 .resultDetails>.name {
   font-weight: 600;
   color: #004990;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .resultDetails>.address, .resultDetails>.rating {
@@ -75,12 +74,12 @@ section> .resultTitle {
 }
 
 #weatherSection {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 section>.weatherDisplay {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 section .day {
@@ -103,24 +102,54 @@ section .day {
   background: #F1F5F8;
 }
 
-.day > * {
-  margin-bottom:8px;
+.day>* {
+  margin-bottom: 8px;
 }
 
-.day > .icon {
-  margin-bottom:5px;
-}
-.day >.date {
-  color:#424242;
-}
-.day >.temp {
-  color:#727272;
+.day>.icon {
+  margin-bottom: 5px;
 }
 
-.day > .text {
-  font-size:90%;
-  font-weight:500;
+.day>.date {
+  color: #424242;
 }
-.day >.date, .day > .temp {
-    font-weight: 600;
+
+.day>.temp {
+  color: #727272;
+}
+
+.day>.text {
+  font-size: 90%;
+  font-weight: 500;
+}
+
+.day>.date, .day>.temp {
+  font-weight: 600;
+}
+
+@media(max-width:600px) {
+  section>.weatherDisplay {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+  }
+}
+
+@media(max-width:450px) {
+  section>.weatherDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result {
+    grid-template-columns: 1fr;
+  }
+  .resultImg {
+    width: 100%;
+    height: auto;
+  }
+  .resultDetails {
+    text-align: center;
+  }
+  .resultDetails >* {
+    margin-bottom:10px;
+  }
 }

@@ -19,8 +19,8 @@ $(document).ready(function(){
       </div>
 
     <div class="details">
-      <div class="humidity">Humidity: ${humidity}</div>
-      <div class="wind">Wind: ${wind_mph}</div>
+      <div class="humidity">Humidity: ${humidity} %</div>
+      <div class="wind">Wind: ${wind_mph} mph</div>
       <div class="feelslike">Feels like: ${feelslike_c} &#176;C </div>
     </div>
 
