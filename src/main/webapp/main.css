@@ -109,7 +109,7 @@ section {
 
 .section1 h2 {
   font-family: 'Lobster', sans-serif;
-  font-size: 50px;
+  font-size: 300%;
   letter-spacing: 2px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -213,7 +213,78 @@ section {
 
 .citySearch input {
   font-size: 120%;
-  width:300px;
+  width: 300px;
   padding: 0 10px;
-  line-height:36px;
+  line-height: 36px;
+}
+
+@media (max-width:1200px) {
+  .container {
+    padding: 15px 10%;
+  }
+}
+
+@media (max-width:1000px) {
+  .container {
+    padding: 15px 5%;
+  }
+  .section1 h2 {
+    font-size: 250%;
+  }
+}
+
+@media (max-width:800px) {
+  body {
+    font-size: 95%;
+  }
+  .section1>.details {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 30px;
+  }
+  section>*, section>.resultList>* {
+    margin-bottom: 0 !important;
+  }
+  .section1 h2 {
+    font-size: 200%;
+  }
+}
+
+@media (max-width:650px) {
+  .container {
+    padding: 15px 30px;
+  }
+  .section1 h2 {
+    font-size: 180%;
+  }
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  nav .navButtonDiv {
+    display: none;
+  }
+  .citySearch div {
+    font-size: 150%;
+  }
+  .citySearch input {
+    width: 200px;
+  }
+}
+
+@media (max-width:550px) {
+  .section1>.details {
+    padding: 0 10px;
+  }
+  .section1 .details>* {
+    margin-bottom: 10px;
+  }
+  .section1 h2 {
+    font-size: 150%;
+  }
+  .citySearch div {
+    font-size: 150%;
+  }
+  .citySearch input {
+    width: 150px;
+  }
 }
