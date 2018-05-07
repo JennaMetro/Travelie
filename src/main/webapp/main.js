@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   $(".logoDiv").click(function() {
-    window.location = "main.html";
+    window.location = "index.html";
   });
 
   $('.citySearch > input').keypress(function(e) {
