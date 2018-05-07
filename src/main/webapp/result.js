@@ -39,7 +39,7 @@ $(document).ready(function() {
       titleString = 'cafes';
     }
 
-    console.log(url)
+    // console.log(url)
 
     fetch(url, {
         method: "GET",
@@ -59,14 +59,14 @@ $(document).ready(function() {
             photo_ref = `CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU`;
           } else photo_ref = element.photos[0].photo_reference;
           let imgRequestUrl = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photo_ref}&key=${googleKey}`;
-          let imgUrl;
+          // let imgUrl;
           fetch(imgRequestUrl, {
               method: "GET",
             })
             .then(response => response.blob())
             .then(function(response) {
-              var urlCreator = window.URL || window.webkitURL;
-              var imageUrl = urlCreator.createObjectURL(response);
+              let urlCreator = window.URL || window.webkitURL;
+              let imageUrl = urlCreator.createObjectURL(response);
               $(`#${divName} > .resultTitle`).text(`Top 5 ${titleString} in ${localStorage.getItem('cityName')}`)
               $(`#${divName} >  .resultList`).append(
                 `<div class="result">

@@ -2,11 +2,6 @@ $(document).ready(function() {
 
   let url = "https://travelie.herokuapp.com/city";
 
-  fetch(url, {
-      method: "GET",
-    }).then(response => response.json())
-    .then(response => console.log(response))
-
   function postCityName(name) {
     fetch(url, {
       method: "POST",
@@ -35,4 +30,8 @@ $(document).ready(function() {
   $(".logoDiv").click(function() {
     window.location = "index.html";
   });
+
+  $(".details button").click(function() {
+    window.location = "recommend.html";
+  })
 });
