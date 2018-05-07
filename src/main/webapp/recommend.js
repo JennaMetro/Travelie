@@ -16,7 +16,7 @@ $(document).ready(function() {
           .then(response => response.json())
           .then(function(response) {
             let element = response.results[0];
-            console.log(element)
+            // console.log(element)
             let photo_ref;
             if (element.photos === undefined) {
               photo_ref = `CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU`;
@@ -41,6 +41,11 @@ $(document).ready(function() {
                     </div>
                     `
                 )
+                $('.result').click(function() {
+                  let name = $(this).find('.name').text();
+                  localStorage.setItem("cityName", name);
+                  window.location = "result.html";
+                })
               })
           })
       }

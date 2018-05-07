@@ -51,6 +51,7 @@ section> .resultTitle {
 .resultDetails>.name {
   font-weight: 600;
   color: #004990;
+  cursor:pointer;
 }
 
 .resultDetails>.address, .resultDetails>.rating {
