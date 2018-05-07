@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package app;
 
-/**
- *
- * @author Jenna
- */
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,6 +20,19 @@ public class Controller {
     @RequestMapping("/cityRumble")
     public String cityRumble(@RequestParam(value="name", defaultValue="default") String name) {
         return name+" returned";
+    }
+    
+    @RequestMapping("/cityCounter")
+    public void cityCounter(@RequestParam(value="name", defaultValue="default") String name) {
+        
+        
+        //add city to a list/set
+        
+        //add the counter to correct city
+        
+        //note:city list probably on its own city class
+        
+        //return method with top 6 counts 
     }
     
 }
