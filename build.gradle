@@ -10,6 +10,7 @@ plugins{
     id 'war'
 }
 
+
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'eclipse'
@@ -35,12 +36,6 @@ task stage {
 }
 war.mustRunAfter clean		
 
-jar{
-    enabled = true
-}
-war {
-    enabled = true
-}
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     compileOnly 'org.eclipse.jetty:jetty-runner:9.4.9.v20180320'
@@ -49,7 +44,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
+jar{
+    enabled = true
+}
+war {
+   enabled = true
+}
 repositories {
     jcenter()
     mavenCentral()
