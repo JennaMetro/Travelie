@@ -23,7 +23,20 @@ $(document).ready(function() {
   $('.citySearch > input').keypress(function(e) {
     if (e.which == 13) {
       let cityName = $(this).val();
-      postCityName(cityName);
+
+      let key = `AIzaSyA51GtAToTOjiu4pEYW8miXs6lwexTMZvk`;
+      let url = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${cityName}&types=(cities)&key=${key}`
+
+      fetch(url, {
+          method: "GET",
+        })
+        .then(response => response.json())
+        .then(function(response) {
+          cityName = response.predictions[0].structured_formatting.main_text;
+          localStorage.setItem("cityName", cityName);
+          postCityName(cityName);
+          window.location = "result.html";
+        })
     }
   });
 
@@ -33,5 +46,9 @@ $(document).ready(function() {
 
   $(".details button").click(function() {
     window.location = "recommend.html";
+  })
+
+  $(".navButton").click(function(){
+    window.location = "login.html";
   })
 });

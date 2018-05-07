@@ -55,7 +55,6 @@ nav img {
 nav .navButtonDiv {
   display: flex;
   font-weight: 500;
-  width: 300px;
   justify-content: flex-end;
 }
 
@@ -63,7 +62,7 @@ nav .navButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 20px;
+  padding: 10px 25px;
   border-radius: 3px;
   background: #008CCF;
   color: white;
@@ -74,7 +73,8 @@ nav .navButton {
 }
 
 nav .navButton:nth-child(2) {
-  margin-left: 50px;
+  /* margin-left: 50px; */
+  display:none;
 }
 
 .companyName {
@@ -260,9 +260,6 @@ section {
   }
   .section2 {
     grid-template-columns: 1fr;
-  }
-  nav .navButtonDiv {
-    display: none;
   }
   .citySearch div {
     font-size: 150%;

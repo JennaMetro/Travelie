@@ -141,6 +141,7 @@ section .day {
 
   .result {
     grid-template-columns: 1fr;
+    grid-gap:10px;
   }
   .resultImg {
     width: 100%;
