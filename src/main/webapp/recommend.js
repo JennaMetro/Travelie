@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  let url = "https://cors-anywhere.herokuapp.com/https://travelie.herokuapp.com/city";
+  let url = "https://travelie.herokuapp.com/city";
 
 
   fetch(url, {
