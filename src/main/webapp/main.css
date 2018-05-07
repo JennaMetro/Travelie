@@ -242,7 +242,7 @@ section {
     bottom: 0;
     padding: 10px 30px;
   }
-  section>*, section>.resultList>* {
+  section:not(.resultSection)>* {
     margin-bottom: 0 !important;
   }
   .section1 h2 {

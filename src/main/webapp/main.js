@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  let url = "https://travelie.herokuapp.com/";
+  let url = "https://travelie.herokuapp.com/city";
 
   fetch(url, {
       method: "GET",
