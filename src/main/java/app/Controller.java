@@ -25,4 +25,10 @@ public class Controller {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+    
+    @RequestMapping("/cityRumble")
+    public String cityRumble(@RequestParam(value="name", defaultValue="default") String name) {
+        return name+" returned";
+    }
+    
 }

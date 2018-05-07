@@ -9,8 +9,19 @@ $(document).ready(function() {
 
   $(".readMore").click(function() {
     let cityName = $(this).parent().find(".cityName").text();
+      
+    let  url = "http://localhost:8080/greeting?name="+cityName;  
+    fetch(url, {
+      method: "POST",
+      cache: 'no-cache'
+    }).then(
+      function(result){
+        console.log(result)
+    }
+    )
+  
     console.log(cityName);
-    window.location = "result.html";
+    //window.location = "result.html";
     localStorage.setItem("cityName", cityName);
   });
 
