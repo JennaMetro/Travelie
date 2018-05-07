@@ -59,17 +59,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:40px;
 }
 
 .companyName {
   font-family: 'Lobster', cursive;
-  font-size: 300%;
+  font-size: 270%;
   color: #008CCF;
 }
 
 .logoDiv img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 
 .login-title {
@@ -182,9 +183,5 @@ input:focus~.focus-border {
   }
   .logoDiv {
     margin-bottom: 20px;
-  }
-  .logoDiv img {
-    width: 150px;
-    height: 150px;
   }
 }
