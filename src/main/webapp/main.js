@@ -15,8 +15,8 @@ $(document).ready(function() {
       method: "POST",
       cache: 'no-cache'
     }).then(
-      function(result){
-        console.log(result)
+      function(response){
+        console.log(response)
     }
     )
   
