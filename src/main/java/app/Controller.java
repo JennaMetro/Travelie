@@ -105,19 +105,23 @@ public class Controller {
 
             int smallest = Integer.MAX_VALUE;
             for (Map.Entry<String, Integer> entry : Model.mostSearchedCities.entrySet()) {
+                System.out.println(entry.getKey() + "--" + entry.getValue());
+                System.out.println("----------");
                 if (smallest > entry.getValue()) {
                     smallest = entry.getValue();
                 }
             }
 
             if (newCount > smallest) {
-                if (Model.mostSearchedCities.size() >= 10) {
-                    for (String s : Model.mostSearchedCities.keySet()) {
-                        if (Model.mostSearchedCities.get(s) == smallest) {
-                            if(Model.mostSearchedCities.size() >= 10) {
-                                Model.mostSearchedCities.remove(s);
-                            }                           
-                            break;
+                if (!Model.mostSearchedCities.containsKey(cityName)) {
+                    if (Model.mostSearchedCities.size() >= 10) {
+                        for (String s : Model.mostSearchedCities.keySet()) {
+                            if (Model.mostSearchedCities.get(s) == smallest) {
+                                if (Model.mostSearchedCities.size() >= 10) {
+                                    Model.mostSearchedCities.remove(s);
+                                    break;
+                                }
+                            }
                         }
                     }
                 }
