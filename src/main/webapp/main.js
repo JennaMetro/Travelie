@@ -14,11 +14,10 @@ $(document).ready(function() {
     fetch(url, {
       method: "POST",
       cache: 'no-cache'
-    }).then(
-      function(response){
-        console.log(response)
     }
-    )
+    ).then(response => response.text())
+	.then (response => console.log(response))
+	.then(function(result){console.log(result)});
   
     console.log(cityName);
     //window.location = "result.html";
