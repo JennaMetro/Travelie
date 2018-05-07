@@ -279,12 +279,19 @@ section {
     margin-bottom: 10px;
   }
   .section1 h2 {
-    font-size: 150%;
+    font-size: 180%;
   }
   .citySearch div {
     font-size: 150%;
   }
   .citySearch input {
     width: 150px;
+  }
+}
+
+@media (max-width:400px){
+  .citySearch input {
+    width:120px;
+    font-size:80%;
   }
 }
