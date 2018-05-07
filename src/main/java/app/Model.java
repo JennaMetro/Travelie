@@ -15,4 +15,5 @@ import java.util.Map;
 public class Model {
     static Map<String, Integer> cityList = new HashMap<>();
     static Map<String, Integer> mostSearchedCities = new HashMap<>();
+    
 }
