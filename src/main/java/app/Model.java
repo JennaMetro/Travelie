@@ -6,16 +6,13 @@
 package app;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  *
  * @author phan thanh cuong
  */
 public class Model {
-    static Set<String> cityList = new HashSet<>();
-    static Map<String, Integer> cityListCount = new HashMap<>();
+    static Map<String, Integer> cityList = new HashMap<>();
     static Map<String, Integer> mostSearchedCities = new HashMap<>();
 }
