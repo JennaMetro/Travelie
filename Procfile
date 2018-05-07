@@ -1,1 +1,1 @@
-web: java -jar build/server/jetty-runner.jar --port $PORT build/libs/eyeTravel.war
+web: java -jar -Dserver.port=$PORT build/libs/eyeTravel.jar
