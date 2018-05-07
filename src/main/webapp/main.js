@@ -10,7 +10,7 @@ $(document).ready(function() {
   $(".readMore").click(function() {
     let cityName = $(this).parent().find(".cityName").text();
       
-    let  url = "http://localhost:8080/greeting?name="+cityName;  
+    let  url = "/cityRumble?name="+cityName;  
     fetch(url, {
       method: "POST",
       cache: 'no-cache'
@@ -19,9 +19,9 @@ $(document).ready(function() {
 	.then (response => console.log(response))
 	.then(function(result){console.log(result)});
   
-    console.log(cityName);
+    //console.log(cityName);
     //window.location = "result.html";
-    localStorage.setItem("cityName", cityName);
+    //localStorage.setItem("cityName", cityName);
   });
 
   $(".logoDiv").click(function() {
