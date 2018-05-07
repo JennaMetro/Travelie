@@ -1,5 +1,6 @@
 package app;
 
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,10 +55,10 @@ public class Controller {
         obj.put("name", "Rome");
         ja.add(obj);
         obj = new JSONObject();
-        obj.put("name", "Dublin");
+        obj.put("name", "Los Angeles");
         ja.add(obj);
         obj = new JSONObject();
-        obj.put("name", "Madrid");
+        obj.put("name", "Seoul");
         ja.add(obj);
         obj = new JSONObject();
         obj.put("name", "Athens");
@@ -77,9 +78,21 @@ public class Controller {
 
     @RequestMapping(value = "/city", method = RequestMethod.POST)
     public String cityNameSearched(@RequestBody String cityName) {
-        if (Model.cityList.contains(cityName)) {
-
+        if (Model.cityList.containsKey(cityName)) {
+            int newCount = Model.cityList.get(cityName) + 1;
+            Model.cityList.put(cityName, newCount);
+            
+            int smallest = Integer.MAX_VALUE ;
+            for(Map.Entry<String, Integer> entry : Model.mostSearchedCities.entrySet()) {
+                if (smallest > entry.getValue()) {
+                    smallest = entry.getValue();
+                }
+            }
         }
-        return cityName;
+        else {
+            Model.cityList.put(cityName, 1);
+        }
+        
+        return "successfully added";
     }
 }
