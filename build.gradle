@@ -28,13 +28,19 @@ task copyToLib(type: Copy) {
     }
 }
 
+
 //Add to task stage that Heroku to prepare deployment
 task stage {
     dependsOn clean, war, copyToLib 
 }
 war.mustRunAfter clean		
 
-
+jar{
+    enabled = true
+}
+war {
+    enabled = true
+}
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     compileOnly 'org.eclipse.jetty:jetty-runner:9.4.9.v20180320'
