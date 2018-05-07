@@ -37,18 +37,42 @@ public class Controller {
     @RequestMapping(value = "/city", method = RequestMethod.GET)
     @SuppressWarnings("unchecked")
     public JSONObject test() {
+        JSONArray ja = new JSONArray();
         JSONObject obj = new JSONObject();
         obj.put("name", "Helsinki");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Singapore");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Hong Kong");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "New York");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Rome");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Dublin");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Madrid");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Athens");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Tokyo");
+        ja.add(obj);
+        obj = new JSONObject();
         obj.put("name", "Kyoto");
-        return obj;
+        ja.add(obj);
+        
+        JSONObject results = new JSONObject();
+        results.put("results", ja);
+        
+        return results;
     }
 
     @RequestMapping(value = "/city", method = RequestMethod.POST)
