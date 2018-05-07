@@ -38,7 +38,7 @@ public class Controller {
         //return method with top 6 counts 
     }
     
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/city", method = RequestMethod.GET)
     @SuppressWarnings("unchecked")
     public JSONObject test() {
         JSONObject obj = new JSONObject();
@@ -51,7 +51,7 @@ public class Controller {
         return obj;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/city", method = RequestMethod.POST)
     public String cityNameSearched(@RequestBody String cityName) {
         return cityName;
     }
