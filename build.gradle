@@ -17,20 +17,30 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 mainClassName = 'app/App'
 
-task stage(type: Copy, dependsOn: [clean, build]) {
-    from jar.archivePath
-    into project.rootDir
-    rename {
-        'app.jar'
+//Include the jetty runner into the build/server folder
+task copyToLib(type: Copy) {
+    into "$buildDir/server"				//Default $buildDir is build/
+    from(configurations.compileOnly) {	//Note the use of the name of dependency 
+        include "jetty-runner*"			// configuration "compileOnly"
+        rename { String fileName -> 		//Forget the version # from filename
+"jetty-runner.jar"   
+        }
     }
 }
-stage.mustRunAfter(clean)
 
-clean << {
-    project.file('app.jar').delete()
+
+//Add to task stage that Heroku to prepare deployment
+task stage {
+    dependsOn clean, war, copyToLib 
 }
+war.mustRunAfter clean		
 
-
+jar{
+    enabled = true
+}
+war {
+    enabled = true
+}
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     compileOnly 'org.eclipse.jetty:jetty-runner:9.4.9.v20180320'
