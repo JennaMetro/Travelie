@@ -6,7 +6,7 @@
 .gradle/
 
 #Gradle build files (also jetty-runner)
-build/
+#build/
 
 #Webapp runner (Tomcat) build files
 target/
