@@ -24,7 +24,7 @@ $(document).ready(function() {
     if (e.which == 13) {
       let cityName = $(this).val();
 
-      let key = `AIzaSyA51GtAToTOjiu4pEYW8miXs6lwexTMZvk`;
+      let key = `AIzaSyB2F9Rh3cFiuDuRxfTCaiS0AyS2sTO_ZFw`;
       let url = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${cityName}&types=(cities)&key=${key}`
 
       fetch(url, {

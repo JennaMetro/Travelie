@@ -4,7 +4,7 @@ $(document).ready(function() {
   var activityString = `things+to+do+in`;
   var cafeString = `cafe+in`;
 
-  var googleKey = "AIzaSyA51GtAToTOjiu4pEYW8miXs6lwexTMZvk";
+  var googleKey = "AIzaSyB2F9Rh3cFiuDuRxfTCaiS0AyS2sTO_ZFw";
   var weatherKey = "3c7ba6fb3b6b49c399372820182704";
   var cityName = localStorage.getItem('cityName');
 
