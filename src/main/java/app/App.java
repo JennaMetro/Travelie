@@ -17,7 +17,7 @@ public class App {
         Model.cityList.put("Seoul", 4);
         Model.cityList.put("Athens", 3);
         Model.cityList.put("Tokyo", 2);
-        Model.cityList.put("Kyoto", 1);
+        Model.cityList.put("Bangkok", 1);
         Model.mostSearchedCities.put("Helsinki", 10);
         Model.mostSearchedCities.put("Singapore", 9);
         Model.mostSearchedCities.put("Hong Kong", 8);
@@ -27,7 +27,7 @@ public class App {
         Model.mostSearchedCities.put("Seoul", 4);
         Model.mostSearchedCities.put("Athens", 3);
         Model.mostSearchedCities.put("Tokyo", 2);
-        Model.mostSearchedCities.put("Kyoto", 1);
+        Model.mostSearchedCities.put("Bangkok", 1);
         SpringApplication.run(App.class, args);
     }
 }
