@@ -85,9 +85,9 @@ public class Controller {
 //        }
         JSONArray ja = new JSONArray();
         JSONObject obj;
-        for (String s : Model.mostSearchedCities.keySet()) {
+        for (City c : Model.mostSearchedCities) {
             obj = new JSONObject();
-            obj.put("name", s);
+            obj.put("name", c.getName());
             ja.add(obj);
         }
         results.put("results", ja);
@@ -104,29 +104,35 @@ public class Controller {
             Model.cityList.put(cityName, newCount);
 
             int smallest = Integer.MAX_VALUE;
-            for (Map.Entry<String, Integer> entry : Model.mostSearchedCities.entrySet()) {
-                System.out.println(entry.getKey() + "--" + entry.getValue());
-                System.out.println("----------");
-                if (smallest > entry.getValue()) {
-                    smallest = entry.getValue();
+            int smallestIndex = 0;
+            for (City c : Model.mostSearchedCities) {
+                if (c.getCount() < smallest) {
+                    smallest = c.getCount();
+                    smallestIndex = Model.mostSearchedCities.indexOf(c);
                 }
             }
 
             if (newCount > smallest) {
-                if (!Model.mostSearchedCities.containsKey(cityName)) {
-                    if (Model.mostSearchedCities.size() >= 10) {
-                        for (String s : Model.mostSearchedCities.keySet()) {
-                            if (Model.mostSearchedCities.get(s) == smallest) {
-                                if (Model.mostSearchedCities.size() >= 10) {
-                                    Model.mostSearchedCities.remove(s);
-                                    break;
-                                }
-                            }
-                        }
+                boolean isFound = false;
+                for (City c : Model.mostSearchedCities) {
+                    if (c.getName().equals(cityName)) {
+                        isFound = true;
+                        c.countIncrement();
+                        break;
                     }
                 }
 
-                Model.mostSearchedCities.put(cityName, newCount);
+                if (!isFound) {
+//                    for (int i = 0; i < Model.mostSearchedCities.size(); i++) {
+//                        if (Model.mostSearchedCities.get(i).getCount() == smallest) {
+//                            Model.mostSearchedCities.remove(i);
+//                            Model.mostSearchedCities.add(new City(cityName, newCount));
+//                            break;
+//                        }
+//                    }
+                    Model.mostSearchedCities.remove(smallestIndex);
+                    Model.mostSearchedCities.add(new City(cityName, newCount));
+                }
             }
         } else {
             Model.cityList.put(cityName, 1);

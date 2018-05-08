@@ -5,14 +5,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
       <group>
-        <file>file:/home/jasmin/Documents/Software%20structures%20and%20models/Travelie%20project/Travelie/src/main/java/app/Counter.java</file>
-        <file>file:/home/jasmin/Documents/Software%20structures%20and%20models/Travelie%20project/Travelie/src/main/java/app/Greeting.java</file>
-        <file>file:/home/jasmin/Documents/Software%20structures%20and%20models/Travelie%20project/Travelie/src/main/java/app/Controller.java</file>
-      </group>
-    </open-files>
-    <editor-bookmarks lastBookmarkId="0" xmlns="http://www.netbeans.org/ns/editor-bookmarks/2"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-      <group>
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/webapp/indexOld.js</file>
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/webapp/result.css</file>
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/webapp/index.js</file>
@@ -32,6 +24,15 @@
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/webapp/result.js</file>
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/webapp/main.css</file>
         <file>file:/C:/Users/Jenna/Desktop/koulu/Travelie/Travelie/src/main/java/app/Controller.java</file>
+      </group>
+    </open-files>
+    <editor-bookmarks lastBookmarkId="0" xmlns="http://www.netbeans.org/ns/editor-bookmarks/2"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+      <group>
+        <file>file:/C:/Users/phan%20thanh%20cuong/Documents/GitHub/Travelie/src/main/java/app/Model.java</file>
+        <file>file:/C:/Users/phan%20thanh%20cuong/Documents/GitHub/Travelie/src/main/java/app/City.java</file>
+        <file>file:/C:/Users/phan%20thanh%20cuong/Documents/GitHub/Travelie/src/main/java/app/Controller.java</file>
+        <file>file:/C:/Users/phan%20thanh%20cuong/Documents/GitHub/Travelie/src/main/java/app/App.java</file>
       </group>
     </open-files>
   </auxiliary>

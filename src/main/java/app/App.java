@@ -18,16 +18,16 @@ public class App {
         Model.cityList.put("Athens", 3);
         Model.cityList.put("Tokyo", 2);
         Model.cityList.put("Bangkok", 1);
-        Model.mostSearchedCities.put("Helsinki", 10);
-        Model.mostSearchedCities.put("Singapore", 9);
-        Model.mostSearchedCities.put("Hong Kong", 8);
-        Model.mostSearchedCities.put("New York", 7);
-        Model.mostSearchedCities.put("Rome", 6);
-        Model.mostSearchedCities.put("Los Angeles", 5);
-        Model.mostSearchedCities.put("Seoul", 4);
-        Model.mostSearchedCities.put("Athens", 3);
-        Model.mostSearchedCities.put("Tokyo", 2);
-        Model.mostSearchedCities.put("Bangkok", 1);
+        Model.mostSearchedCities.add(new City("Helsinki", 10));
+        Model.mostSearchedCities.add(new City("Singapore", 9));
+        Model.mostSearchedCities.add(new City("Hong Kong", 8));
+        Model.mostSearchedCities.add(new City("New York", 7));
+        Model.mostSearchedCities.add(new City("Rome", 6));
+        Model.mostSearchedCities.add(new City("Los Angeles", 5));
+        Model.mostSearchedCities.add(new City("Seoul", 4));
+        Model.mostSearchedCities.add(new City("Athens", 3));
+        Model.mostSearchedCities.add(new City("Tokyo", 2));
+        Model.mostSearchedCities.add(new City("Bangkok", 1));
         SpringApplication.run(App.class, args);
     }
 }

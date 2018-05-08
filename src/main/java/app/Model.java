@@ -6,6 +6,7 @@
 package app;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 /**
@@ -14,6 +15,6 @@ import java.util.Map;
  */
 public class Model {
     static Map<String, Integer> cityList = new HashMap<>();
-    static Map<String, Integer> mostSearchedCities = new HashMap<>();
+    static LinkedList<City> mostSearchedCities = new LinkedList<>();
     
 }
